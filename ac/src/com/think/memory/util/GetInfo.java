@@ -61,8 +61,10 @@ public class GetInfo extends AsyncTask<Object, Integer, String> {
 					Common.server_time	= res.getInt("timestamp");
 					Common.nick			= res.getString("nick");
 					Common.plat			= res.getJSONArray("plat");
+					Common.did			= res.getJSONArray("did");
 					Common.show_sign	= res.getBoolean("show_sign");
 					Common.show_end		= res.getBoolean("show_end");
+					
 					Common.getScore		= false; // 设置不用获取用户信息
 					Common.show_ok		= true;
 					Common.client_time	= (int) (System.currentTimeMillis() / 1000);

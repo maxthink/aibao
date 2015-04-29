@@ -104,7 +104,8 @@ public class HomeFragment extends Fragment {
 	public void startAd(int ad) throws JSONException {
 		Log.e("home", "startAd " + ad);
 		switch (ad) {
-		case 1: // offwall_youmi
+		case 1: // youmi
+			
 			startActivity(new Intent(getActivity(), YoumiActivity.class));
 			break;
 		case 2: // qumi
@@ -127,6 +128,35 @@ public class HomeFragment extends Fragment {
 		default:
 			break;
 		}
+	}
+	
+	private boolean allow(int plat){
+		
+		try {
+			JSONArray array = Common.plat;
+
+			for (int i = 0; i < array.length(); i++) {
+				JSONObject jo = (JSONObject) array.opt(i);
+				CmccMovieInfo info = new CmccMovieInfo();
+
+				info.setContentId(jo.getString("contentId"));
+				info.setDesc(jo.getString("desc"));
+				info.setNodeId(jo.getString("nodeId"));
+				info.setImgUrl(jo.getString("imgUrl"));
+
+				String name = jo.getString("name");
+				String md5 = Md5Util.md5(name);
+				info.setName(name);
+				info.setMd5(md5);
+
+				res.add(info);
+			}
+		} catch (JSONException e) {
+			MyLog.e(TAG, "parseContentList exception: " + e.getMessage());
+		}
+
+		
+		return false;
 	}
 
 	public void duomeng_checkPoints() {

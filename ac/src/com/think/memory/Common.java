@@ -42,6 +42,7 @@ public class Common {
 	public static String nick = "";
 	public static boolean is_sign = false;
 	public static JSONArray plat ;
+	public static JSONArray did ;
 	
 	// 广告显示配置
 	public static boolean show_sign = false;

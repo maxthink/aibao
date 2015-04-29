@@ -172,6 +172,9 @@ public class ExchangeFragment extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if( getUserVisibleHint() ) {
             initSomeData();
+            Log.e("exchagnefragment"," visalbe true ");
+        }else{
+        	Log.e("exchagnefragment"," visalbe false ");
         }
     }
 	
