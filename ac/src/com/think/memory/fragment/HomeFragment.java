@@ -74,19 +74,19 @@ public class HomeFragment extends Fragment {
 
 	}
 	
-	@JavascriptInterface
+	
 	private void showAds(){
 
 		if(Common.plat != null){
-			
+			//jsonData的数据格式：[{ "id": "27JpL~jd99w9nM01c000qc", "version": "abc" },{ "id": "27JpL~j6UGE0LX00s001AH", "version": "bbc" },{ "id": "27JpL~j7YkM0LX01c000gt", "version": "Wa_" }]
 			for (int i = 0; i < Common.plat.length(); i++) {
 				try {
 					JSONObject temp = (JSONObject) Common.plat.get(i);
 					String name = temp.getString("name");
 					String color = temp.getString("color");
 					String platid = temp.getString("plat_id");
-					Common.log("", "setad: name:"+name+" color:"+color+" platid:"+platid);
-					webView.loadUrl("javascript:setAd('"+name+"','"+color+"',"+platid+")");
+					
+					webView.loadUrl("javascript:setAd("+name+","+color+","+platid+")");
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -104,48 +104,25 @@ public class HomeFragment extends Fragment {
 	public void startAd(int ad) throws JSONException {
 		Log.e("home", "startAd " + ad);
 		switch (ad) {
-		
-		case 1: // o2o
+		case 1: // youmi
 			
-			if( allow(1) ){
-				// startActivity(new Intent(getActivity(), O2oActivity.class));
-				JSONObject jsonObject = new JSONObject();
-				jsonObject.put("uid", Common.uid + "");
-				OffersManager.showOffers(getActivity(), Common.o2o_key, jsonObject);
-			}else{
-				Common.showMsg(getActivity(), "该平台任务做的够多了,换个平台吧.",  3000);
-			}
+			startActivity(new Intent(getActivity(), YoumiActivity.class));
 			break;
-		case 2: // youmi
-			if( allow(2) ){
-				startActivity(new Intent(getActivity(), YoumiActivity.class));
-			}else{
-				Common.showMsg(getActivity(), "该平台任务做的够多了,换个平台吧.",  3000);
-			}
-			
+		case 2: // qumi
+			startActivity(new Intent(getActivity(), QumiActivity.class));
 			break;
-		case 3: // 赢告
-			if( allow(3) ){
-				startActivity(new Intent(getActivity(), YinggaoActivity.class));
-			}else{
-				Common.showMsg(getActivity(), "该平台任务做的够多了,换个平台吧.",  3000);
-			}
-			
+		case 3: // duomeng
+			// startActivity(new Intent(getActivity(), DuomengActivity.class));
+			DAOW.getInstance(getActivity()).show(getActivity());
 			break;
-		case 4: // duomeng
-			if( allow(4) ){
-				DAOW.getInstance(getActivity()).show(getActivity());
-			}else{
-				Common.showMsg(getActivity(), "该平台任务做的够多了,换个平台吧.",  3000);
-			}
-			
+		case 4: // o2o
+			// startActivity(new Intent(getActivity(), O2oActivity.class));
+			JSONObject jsonObject = new JSONObject();
+			jsonObject.put("uid", Common.uid + "");
+			OffersManager.showOffers(getActivity(), Common.o2o_key, jsonObject);
 			break;
-		case 5: // qumi
-			if( allow(5) ){
-				startActivity(new Intent(getActivity(), QumiActivity.class));
-			}else{
-				Common.showMsg(getActivity(), "该平台任务做的够多了,换个平台吧.",  3000);
-			}
+		case 5: // ...
+			startActivity(new Intent(getActivity(), YinggaoActivity.class));
 			break;
 
 		default:
@@ -156,46 +133,30 @@ public class HomeFragment extends Fragment {
 	private boolean allow(int plat){
 		
 		try {
+			JSONArray array = Common.plat;
 
-			for (int i = 0; i < Common.plat.length(); i++) {
-				JSONObject jo = (JSONObject) Common.plat.opt(i);
-				
-				int id = jo.getInt("id");
-				Common.log("homefragment", "common.plat id:"+id);
-				if(id==plat){
-					
-					
-					int allow = jo.getInt("allow_num");
-					Common.log("homefargment", "找到相同的平台配置id:"+id+" 的allow :"+allow);
-					
-					for (int j = 0; j < Common.did.length(); j++) {
-						JSONObject did = (JSONObject) Common.did.opt(j);
-						int platid = did.getInt("platform");
-						Common.log("homefragment", "did id:"+platid);
-						
-						if(platid==id){
-							int tc = did.getInt("tc");
-							Common.log("homefargment", "获取到相同的did 次数统计:"+tc);
-							if(tc<allow){
-								return true;
-							}else{
-								return false;
-							}
-						}
-					}
-					
-					Common.log("", "没有找到该平台已做任务数据, 默认返回 true");
-					return true;	//应该是还没有做该平台任务, 所以返回 true, 允许做任务.					
-				}
+			for (int i = 0; i < array.length(); i++) {
+				JSONObject jo = (JSONObject) array.opt(i);
+				CmccMovieInfo info = new CmccMovieInfo();
 
+				info.setContentId(jo.getString("contentId"));
+				info.setDesc(jo.getString("desc"));
+				info.setNodeId(jo.getString("nodeId"));
+				info.setImgUrl(jo.getString("imgUrl"));
+
+				String name = jo.getString("name");
+				String md5 = Md5Util.md5(name);
+				info.setName(name);
+				info.setMd5(md5);
+
+				res.add(info);
 			}
-			
 		} catch (JSONException e) {
-			Common.log("homefragment: ", "parseContentList exception: " + e.getMessage());
+			MyLog.e(TAG, "parseContentList exception: " + e.getMessage());
 		}
+
 		
-		Common.log("homefragment", "try error ");
-		return true;
+		return false;
 	}
 
 	public void duomeng_checkPoints() {

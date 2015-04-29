@@ -26,15 +26,12 @@
 	<section>
 		<div class="title" >赚宝地</div>
 		<div class="ad" >
-			<!--ul>
+			<ul>
 				<li style="background:#eF9B34" onclick="showad(1)" >有米</li>
 				<li style="background:#ee3d5e" onclick="showad(2)" >趣米</li>
 				<li style="background:#E94B35" onclick="showad(3)" >多盟</li>
 				<li style="background:#938d5e" onclick="showad(4)" >欧拓</li>
 				<li style="background:#295B35" onclick="showad(5)" >赢告</li>
-			</ul-->
-			<ul id="ads">
-				
 			</ul>
 		</div>
 		<div class="clearfloat"></div>
@@ -56,11 +53,6 @@
 function showad(n){
 	love.startAd(n);
 }
-function setAd(name,color,platid){
-	var adHtml = '<li style="background:#'+color+'" onclick="showad('+platid+')" >'+name+'</li>';
-	$("#ads").append(adHtml);
-}
-
 </script>
 </body>
 </html>
