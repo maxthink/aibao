@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+     <include
+        android:id="@+id/top_view"
+        layout="@layout/top_layout" />
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="积分：0"
+         android:textStyle="bold"
+         android:layout_marginLeft="20dip"
+         android:layout_marginTop="20dip" />
+
+       <ProgressBar  
+        android:id="@+id/pb"  
+        style="?android:attr/progressBarStyleHorizontal"  
+        android:layout_width="fill_parent"  
+        android:layout_height="5dip"  
+        android:indeterminateOnly="false"  
+        android:max="100"  
+        android:progressDrawable="@drawable/progress_bar_states" >  
+    </ProgressBar>
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dip"
+           android:layout_marginLeft="20dip"
+           android:layout_marginRight="20dip"
+          android:background="#FF0000"
+          android:text="点击赚取积分"
+          android:textColor="#FFFFFF"
+            />
+         <TextView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dip"
+         android:layout_marginLeft="20dip"
+         android:layout_marginRight="20dip"
+         android:text="注：点击里面的广告任务，即可获得相应的积分，获取积分后可以免费试玩游戏"
+         />
+
+</LinearLayout>

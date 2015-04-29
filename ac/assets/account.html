@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="zepto.min.js"></script>
+</head>
+<body>
+
+	<section class="info">
+		<div class="title" >账户信息</div>
+		<!--div class="main_invite" onclick="love.openInvite()">
+			我的邀请码: <span id="invitecode" >IK38J9A2</span><span style="font-weight:100;color:#7192f2;" >(?)</span>
+		</div-->
+		<div class="body" >
+			<ul class="B-useM">
+				
+				<li>
+					<p><span class="grayT" id="taday" >...</span></p>
+					<b>今日收入</b>
+				</li>
+				
+				<li>
+					<p><span class="redT" id="score" >...</span></p>
+					<b>当前积分</b>
+					<!--i><span onclick="love.openExchange()" >提现&gt;&gt;</span></i-->
+				</li>
+
+				<li>
+					<p><span class="redT" id="total" >...</span></p>
+					<b>累计积分</b>
+					
+				</li>
+
+			</ul>
+		</div>
+	</section>
+
+	<section class="account_detail">
+		<table>
+			<tr><td class="left" >任务次数</td>
+				<td class="right" >
+					<span id="task_count" >...</span>次 
+					<span class="fr right_d " onclick="love.openIncome()" class="fl" >&gt;&gt;</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="left" >兑换次数</td>
+				<td class="right" >
+					<span id="exchange_count" >...</span>次
+					<span class="fr right_d " onclick="love.openExchangeRecord()" class="fl" >&gt;&gt;</span>
+				</td>
+			</tr>
+			<!--tr>
+				<td class="left" >邀请人数</td>
+				<td class="right" >
+					<span id="" >0</span>次
+					<span class="fr right_d " onclick="love.openInviteList()" class="fl" >&gt;&gt;</span>
+				</td>
+			</tr-->
+			<!--tr>
+				<td class="left" >已获分成</td>
+				<td class="right" >
+					<span id="" >0</span>
+				</td>
+			</tr-->
+			<tr>
+				<td class="left" >支付宝账号</td>
+				<td class="right" ><span id="" ></span></td>
+			</tr>
+		</table>
+	</section>
+	
+<script >
+
+function initInfo(today,total,score ){
+	document.getElementById("taday").innerHTML=today;
+	document.getElementById("total").innerHTML=total;
+	document.getElementById("score").innerHTML=score;
+	
+
+}
+
+function initInfo2( task_count,exchange_count){
+	document.getElementById("task_count").innerHTML=task_count;
+	document.getElementById("exchange_count").innerHTML=exchange_count;
+}
+
+
+function showad(n){
+	love.startAd(n);
+}
+</script>
+</body>
+</html>

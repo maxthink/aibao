@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<script src="zepto.min.js"></script>
+</head>
+<body>
+
+	 <section class="B-detail">
+    	<ul id="list">
+			<li class="B-detTit">
+            	<span>收支项</span>
+                <span>金币</span>
+                <span>时间</span>
+            </li>
+					
+        </ul>
+    </section>
+	<div class="footer-info" id="indexmore" onclick="getbill()">
+        <span class="link-more" id="link-more" href="javascript:void(0);"><img id="indexloading" style="opacity: 0;" src="img/loading.gif">查看更多</span>
+    </div>
+	<input type="hidden" id="page_no" value="0" />
+	<input type="hidden" id="page_count" value="1" />
+	<input type="hidden" id="imei" value="" />
+</body>
+<script type="text/javascript">
+	
+	function setimei(imei){
+		document.getElementById("imei").value=imei;
+	}
+
+	setimei('359209020227033');
+
+	//获取账单
+	function getbill(){
+		$("#indexloading").css("opacity","1");	//show loading img
+
+		var page_no = document.getElementById("page_no").value;
+		var page_count = document.getElementById("page_count").value;
+		var imei = document.getElementById("imei").value;
+		//love.getBill(page_no);
+		if(page_count > page_no ){
+			
+			$.ajax({
+				url: "http://123.57.56.8/aibao/api/bill.php?imei="+imei+"&page_no="+page_no,
+				dataType: 'jsonp',
+				success: function(res){
+					if(res.status==0){
+
+						$('#page_count').val(res.page.page_count);
+
+						$("#indexloading").css("opacity","0");	//hidden loading img 
+						if(res.page.page_count < res.page.page_no ){		//0 为第一页, 相等时代表没有了
+							$('#link-more').html('<span>么有更多了...</span>');
+							
+						}else{
+							$.each(res.list,function(key,val){
+								$('#list').append('<li><span>'+val.type+'</span><span>'+val.score+'</span><span>'+val.timeline+'</span></li>');
+							})
+							$('#page_no').val(res.page.page_no+1); //set curent page number
+						}
+					}else{
+						$('#link-more').html('么有更多了...');
+						
+					}
+				}
+			});
+
+		}else{
+			
+			$('#link-more').html('<span>么有更多了...</span>');
+		}
+	}
+
+	getbill();
+	
+	//显示账单
+	function setbill( result ){
+
+
+		if(result!=''){
+			//var res =  eval('(' + result + ')'); //由JSON字符串转换为JSON对象
+			//var res = JSON.parse(result);
+			var res = $.parseJSON(result); 
+
+			$("#indexloading").css("opacity","0");	//hidden loading img 
+			
+			if(res.status==0){
+				if(res.page.page_count < res.page.page_no ){		//if curent page number bigger then totle page number , show no more
+					$('.link-more').html('么有更多了...');
+					//document.getElementById("link-more").innerHTMl = "么有更多了...";
+				}else{
+					$.each(res.list,function(key,val){
+						$('#list').append('<li><span>'+val.type+'</span><span>'+val.score+'</span><span>'+val.timeline+'</span></li>');
+					})
+					$('#page_no').html(page_no); //set curent page number
+				}
+			}else{
+				$('.link-more').html('么有更多了...');
+				
+			}
+		}else{
+		
+		}
+		
+	}
+
+	
+	//设置透明度
+	function SetOpacity(obj,opacity){
+		if(opacity >=1 ) opacity = opacity / 100;
+		try{
+			obj.style.opacity = opacity;
+		}catch(e){}
+		try{
+			if(obj.filters){
+				obj.filters("alpha").opacity = opacity * 100;
+			}
+		}catch(e){}
+	}
+
+</script>
+</html>

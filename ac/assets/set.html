@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>    
+	<title>百赚-帮助中心</title>	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bz.css">   
+	<script src="js/zepto.min.js"></script>
+	<script src="js/bz.js"></script>    
+     
+</head>
+<body class="gray">
+	<section class="b-set">
+		<ul class="setT">
+        	<li >开启锁屏<i id="lock" onclick="showLock()"></i></li>
+			<li >解锁震动<i id="virber" class="current" onclick="showVirber()"></i></li>
+			
+        </ul>
+        <ul class="setB">
+        	
+			<li>软件版本<span id="version">V2.1</span></li>
+        </ul>
+    </section>
+    
+    <script>
+
+
+
+function setLock(n){
+	var obj = document.getElementById("lock");
+	
+	if(n==0){
+		obj.setAttribute("class","current");	
+	}else{
+		obj.setAttribute("class","");	
+	}
+	
+}
+var isOpenLock = window.bz.getOpenLock();
+setLock(isOpenLock);
+
+function setVirber(n){
+	var obj = document.getElementById("virber");
+	
+	if(n==0){
+		obj.setAttribute("class","current");	
+	}else{
+		obj.setAttribute("class","");	
+	}
+	
+}
+var isOpenVirber = window.bz.getOpenVirber();
+setVirber(isOpenVirber);
+
+function setSound(n){
+	var obj = document.getElementById("sound");
+	
+	if(n==0){
+		obj.setAttribute("class","current");	
+	}else{
+		obj.setAttribute("class","");	
+	}
+	
+}
+var isOpenSound = window.bz.getSound();
+setSound(isOpenSound);
+
+
+function showLock(){
+	var obj = document.getElementById("lock");
+	var cla = obj.getAttribute("class");
+	if(cla=="current"){
+	
+		window.bz.setOpenLock(0);
+	}else{
+		
+		window.bz.setOpenLock(1);
+	}
+}
+
+function showVirber(){
+	var obj = document.getElementById("virber");
+	var cla = obj.getAttribute("class");
+	if(cla=="current"){
+	
+		window.bz.setOpenVirber(0);
+	}else{
+		
+		window.bz.setOpenVirber(1);
+	}
+}
+function showSound(){
+	var obj = document.getElementById("sound");
+	var cla = obj.getAttribute("class");
+	if(cla=="current"){
+	
+		window.bz.setSound(0);
+	}else{
+		
+		window.bz.setSound(1);
+	}
+}
+function showVersion(){
+	var obj = document.getElementById("version");
+	var a = window.bz.getVersion();
+	obj.innerHTML = a;	
+
+}
+ showVersion();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<style>
+div.k{border:1px solid #CCC; border-radius: 5px 5px; margin:10px;  background:#f6f5f5;}
+div.a{font-size:14px; color:#000; margin:10px; margin-bottom : 20px;text-align:left;}
+div.q{font-size:14px; color:#333333;  margin:20px 10px 10px 10px; text-align:left; font-weight:bold;}
+</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>    
+	<title>支付宝提现</title>	
+	<link rel="stylesheet" href="style.css">
+	<script src="zepto.min.js"></script>    
+    <script src="pay.js"></script>
+</head>
+<body class="gray">
+	<section class="B-payT">
+    	<ul>
+        	<li class="B-payTm"><i></i>可提取积分</li>
+            <li class="B-payTn"><span class="B-payRed" id="payval">加载中...</span></li>
+        </ul>
+    </section>
+	<section class="B-payf">
+        <div class="B-payi">
+        	<input class="B-payfali" type="text" placeholder="支付宝帐号" value="" name="" id="account" >
+	    	<i class="i-border"></i>
+        </div>
+        <dl class="B-paym">
+        	<dt>金额：</dt>
+			<dd><span><i></i><input id="money1" name="money" type="radio" value="2"><label for="money1">2 </label></span></dd>
+        	<dd><span><i></i><input id="money5" name="money" type="radio" value="5"><label for="money5">5 </label></span></dd>   
+			<dd><span><i></i><input id="money10" name="money" type="radio" value="10"><label for="money10">10 </label></span></dd>
+			<dd><span><i></i><input id="money20" name="money" type="radio" value="20"><label for="money20">20 </label></span></dd>
+            <dd><span><i></i><input id="money50" name="money" type="radio" value="50"><label for="money50">50 </label></span></dd>
+            <dd><span><i></i><input id="money100" name="money" type="radio" value="100"><label for="money100">100 </label></span></dd>
+            
+        </dl>
+   </section>
+	<span class="B-payBtn" onClick="sent()">确 定</span>
+<script>
+
+
+function set_account(account){
+	document.getElementById("account").value = account;
+}
+
+function show_score(score){
+	var obj = document.getElementById("payval");	
+	obj.innerHTML = score;
+}
+
+function sent(){
+	var account = document.getElementById('account').value;
+	//window.bz.exchange( val );
+	
+	var score = 0;
+	
+	if( document.getElementById("money1").checked){
+		score = 200;
+	}
+
+	if( document.getElementById("money5").checked){
+		score = 500;
+	}
+	
+	if( document.getElementById("money10").checked){
+		score = 1000;
+	}
+	
+	if( document.getElementById("money20").checked){
+		score = 2000;
+	}
+	
+	if( document.getElementById("money50").checked){
+		score = 5000;
+	}
+	
+	if( document.getElementById("money100").checked){
+		score = 10000;
+	}
+   	
+	window.love.exchange( account, score ,"alipay");
+}
+   
+</script>
+	
+</body>
+</html>

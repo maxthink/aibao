@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 入口布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentRight="true">
+
+    <!-- 入口点击图标 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitXY"
+        android:tag="imageview" />
+
+    <!-- 入口文字 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:tag="textview"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <!-- 新广告提示布局 -->
+    <RelativeLayout
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:tag="newtip_area">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitCenter"
+            android:tag="newtip_iv" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:tag="newtip_tv"
+            android:textColor="#ffffff"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

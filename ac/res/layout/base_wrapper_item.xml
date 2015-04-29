@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="6dp"
+    android:paddingBottom="3dp"
+ 
+    >
+    
+  <TextView
+      android:id="@+id/basecontent"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toLeftOf="@+id/base_time"
+      android:layout_alignParentLeft="true"
+      android:paddingRight="8dp"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:textColor="#4C4C4C"
+      android:textSize="20sp"
+      android:text="明天我要去东湖钓鱼，好不想去了，因为感冒，几天很好 明天我要去东湖钓鱼，好不想去了，因为感冒，几天很好" />
+  
+  <TextView
+      android:id="@+id/base_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toLeftOf="@+id/flag"
+      android:maxLines="1"
+      android:text="14-1-31"
+      android:textColor="#4C4C4C" />
+    
+     <TextView 
+      android:id="@+id/flag"
+      android:layout_width="wrap_content"
+      android:maxLines="1"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:paddingRight="@dimen/activity_horizontal_margin"
+      android:textColor="#036803"
+      android:textStyle="bold"
+      android:text=">"
+      />
+    
+</RelativeLayout>

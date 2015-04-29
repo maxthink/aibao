@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>    
+	<title>充值</title>	
+	<link rel="stylesheet" href="style.css">
+	<script src="zepto.min.js"></script>
+    
+</head>
+<body class="gray">
+	<section class="B-payT">
+    	<ul>
+        	<li class="B-payTm"><i></i>可提取金额</li>
+            <li class="B-payTn"><span class="B-payRed"  id="a">加载中...</span>元</li>
+        </ul>
+    </section>
+    <section class="B-payB">
+    	<ul>
+        	<li><i></i><a href="payq.html">Q币充值</a></li>
+            <li><i></i><a href="payali.html">支付宝充值</a></li>
+            <li><i></i><a href="payphone.html">话费充值</a></li>
+        </ul>
+    </section>
+
+	<script>
+
+function show(a){
+	var obj = document.getElementById("a");	
+	obj.innerHTML = a;
+}
+
+</script>
+</body>
+</html>

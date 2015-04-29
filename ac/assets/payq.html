@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="white"/>    
+	<title>Q币</title>	
+	<link rel="stylesheet" href="style.css">
+	<script src="zepto.min.js"></script>
+	<script src="pay.js"></script>
+    
+</head>
+<body class="gray">
+	<section class="B-payT">
+    	<ul>
+        	<li class="B-payTm"><i></i>可提取积分</li>
+            <li class="B-payTn"><span class="B-payRed" id="payval">加载中...</span></li>
+        </ul>
+    </section>
+	<section class="B-payf">
+        <div class="B-payi">
+        	<input class="B-payfq" type="tel" placeholder="请输入QQ号码" value="" name="" id="a" >
+	    	<i class="i-border"></i>
+        </div>
+        <dl class="B-paym">
+        	<dt>Q币：</dt>
+        	 
+            <dd>
+				<span>
+					<i></i>
+					<input id="money2" name="money" type="radio" value="5" />
+					<label for="money2">5 Q币</label>
+					<label for="money2" class="fr">(5万积分)</label>
+				</span>
+			</dd>
+            <dd>
+				<span>
+					<i></i>
+					<input id="money3" name="money" type="radio" value="10">
+					<label for="money3">10 Q币</label>
+					<label for="money2" class="fr">(10万积分)</label>
+				</span>
+			</dd>
+			<dd><span><i></i><input id="money2" name="money" type="radio" value="30"><label for="money2">30 Q币 (30万积分)</label></span></dd>
+            <dd><span><i></i><input id="money4" name="money" type="radio" value="50"><label for="money4">50 Q币 (50万积分)</label></span></dd>
+            <dd><span><i></i><input id="money5" name="money" type="radio" value="100"><label for="money5">100 Q币 (100万积分)</label></span></dd>
+        </dl>
+    </section>
+	<span class="B-payBtn" onClick="sent()" >确 定</span>  
+	
+<script>
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+   }
+   
+  // var val = getQueryString("val");
+  // document.getElementById("payval").innerHTML = val;
+   
+function sent(){
+	var val = document.getElementById('a').value;
+	//window.bz.exchange( val );
+	
+	var num = 0;
+	
+	
+	
+	if( document.getElementById("money2").checked){
+		num = 5;
+	}
+	
+	if( document.getElementById("money3").checked){
+		num = 10;
+	}	
+	if( document.getElementById("money4").checked){
+		num = 50;
+	}	
+	if( document.getElementById("money5").checked){
+		num = 100;
+	}	
+	if( document.getElementById("money6").checked){
+		num = 300;
+	}	
+   	
+   	alert(val+'__'+num);
+	window.spz.exchange( val, num ,"qq");
+}
+function show(a){
+	var obj = document.getElementById("payval");	
+	obj.innerHTML = a;
+	
+	
+	
+}
+
+
+</script>
+</body>
+</html>

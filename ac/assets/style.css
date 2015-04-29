@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* CSS Document */
+html, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {	margin: 0;	padding: 0;	border: 0;	outline: 0;	font-size:12px;	font-family:'微软雅黑';  }
+*{	-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body {	margin:0px; padding:0px; font-size:16px; font-family:Verdana; color:#8e6a5; background:#fcfcfc; }
+body,html{width:100%; height:100%;}
+ul, dl, dd, h1, h2, h3, h4, h5, h6, form, p { padding:0; margin:0;}
+ul { list-style:none;}
+img { border:none;}
+a { color:#444; text-decoration:none; }
+
+.clearfloat {	clear:both;	height:0;	font-size: 1px;	line-height: 0px;}
+.fl{float:left;}
+.fr{float:right;}
+.tl{text-align: left;}
+.tr{text-align: right; }
+.tc{text-align: center; }
+.w50{width:50px;}
+.w100{width:100px;}
+.w130{width:130px;}
+.w150{width:150px;}
+.hidden{ display:none; }
+.pos_a{ position:absolute;}
+
+/*------------ main -----------------*/
+
+.top{ width:100%; height:56px; background:url("img/top.jpg") repeat-x; line-height:60px; }
+
+.logo{ float:left; }
+.logo img{width:60px; height:60px; float:left; margin-left:5px;  }
+.logo span{ line-height:40px; color:#FFFFFF; font-size:16px; }
+
+.help a{ float:right; color:#FFFFFF; margin-right:10px; }
+
+.title{ padding-top:20px; padding-bottom:10px; padding-left: 10px; height:30px; line-height:30px;font-size:22px; }
+.body{margin-top:20px; height:100%;}
+
+
+/*背景透明 对话框*/
+.opacity{ opacity:0.3; filter: alpha(opacity=30); background-color:#000000; width:100%; height:100%; position:fixed; _position:absolute; z-index:1000;}
+.dialog{ display:none; width:80%; margin-left:-43%; left:50%; margin-top:-15%; top:50%; position:fixed; position:absolute; z-index:1001;border:3px solid #999999; border-radius:2px; background:#fefefe; padding:2px;}
+
+
+/* main 用户信息*/
+.B-useM{ overflow:hidden;border-bottom:2px solid #eee; background:#fcfcfc; border-top: 2px solid #eee;}
+.B-useM li{ text-align:center; width:33%;float:left; overflow:hidden;  border-left:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box; position:relative; }
+.B-useM li p{ display:block;height:35px;line-height:35px; font-weight:normal;padding-top:5px;color:#333; }
+.B-useM li p span{font-size:25px;margin-right:8px;}
+.B-useM li p .grayT{color:#333;}
+.B-useM li p .redT{color:#F3291F;}
+.B-useM li p .tixianT{color:#b6b6b6;}
+.B-useM li b{ color:#B6B6B6;font-size:14px;  display:block;height:35px;line-height:25px; font-weight:normal;}
+.B-useM li i{ position:absolute;right:10px;bottom:3px; display:block;color:#3b83f2;font-size:12px;}
+
+/* main 版本升级对话框*/
+.version_title { color:#F3291F; font-size:18px; padding:5px; }
+#version .desc{ padding:8px; padding-left:20px; border-bottom:2px solid #999999; }
+#version .but{ height:50px; border:0px; width:50%; background:#fefefe; font-size:20px;}
+
+/*日常任务*/
+.richang{ width:96%; margin:0 auto; }
+.richang  ul { width:96%; margin-top:10px; }
+.richang ul li{ width:48%; float:left; display:block; margin-left:2px; margin-bottom:2px; text-align:center; font-size:18px; color:#fff; height:80px;line-height:80px; border-radius:3px; }
+
+/*home 提示 */
+.tishi{width:95%; margin:0 auto; line-height:25px;font-size:14px; overflow:hidden; }
+.tishi .content{ margin:8px; }
+.tishi h3{font-size:16px; padding:10px 0px; margin-top:10px; }
+.tishi p{ width:95%; }
+
+
+/******邀请码*******/
+
+/* main 页面的邀请码 */
+.main_invite{ position:absolute; right:10px; margin-bottom:10px;}
+.main_invite span{ font-size:14px; font-weight:bold; }
+
+/* invite 邀请码输入 */
+.invite{ margin-top:30px; }
+.invite .input {width:70%; margin:0 auto; }
+.invite p{margin:0 auto; padding-bottom:5px; text-align:center; }
+.invite_input { margin-bottom: 10px; height:20px; font-size:18px; width:6em; border: 1px solid #ccc; padding:5px; }
+.invite_submit{width:95%; margin:0 auto; height:40px; display:block; text-align:center; line-height:40px; font-size:24px; background:#aec9b3; border-radius:3px; border: 1px solid #ccc; }
+
+/* invite 邀请介绍 */
+.invite_instr{ width:90%; margin:0 auto; padding-top: 30px; }
+.invite_instr p{font-size:16px; text-indent:2em;}
+.invite_instr span{font-size:16px; color:#fe2839;}
+.invite_instr img{width:80%; margin:0 auto; display:block; padding-top: 10px;}
+
+/* invite 确认邀请 */
+#sure{ padding:10px; }
+#sure p{ font-size: 16px; margin-bottom:10px; }
+#sure .but{ height:30px; border-radius:3px; border: 1px solid #ccc;  width:45%; background:#aec9b3; font-size:20px;}
+
+
+
+
+/*邀请好友*/
+.B-invT{height:44px;line-height:44px;background:#fff;padding:0px 10px;color:#333;}
+.B-invT a{background:url(../img/iconBj.png) no-repeat right 15px;background-size:8px 15px; position:relative; display:block;color:#333}
+.B-invT a span{ display:block; position:absolute;color:#ffd842;right:20px;top:0px;}
+.B-invB{margin:8px;background:#fff;color:#777;padding:10px;font-size:14px}
+.B-invB h3{ text-align:center;color:#333;padding-top:20px;font-size:16px}
+.B-invB h4{padding:5px 0px;text-align:center;color:#333;}
+.B-invB h4 span{color:#e94b35;}
+.B-invB b{ display:block; padding:10px 0px 5px 0px;}
+.B-invB .B-payBtn{margin-top:20px;color:#fff}
+
+/*成功邀请*/
+.B-invf{margin:8px;background:#fff; overflow:hidden;}
+.B-invf dl{border-bottom:1px solid #eee;height:72px;overflow:hidden;padding-left:70px; position:relative}
+.B-invf dt{position:absolute;top:10px;left:10px;}
+.B-invf dt img{width:50px;height:50px;}
+.B-invf dd{padding-top:5px;}
+.B-invf dd p{font-size:16px;height:30px;line-height:30px;}
+.B-invf dd i{ display:block;font-size:14px;color:#aaa;height:30px;line-height:30px;}
+
+/******邀请码 end *******/
+
+
+/*广告*/
+.ad ul { width:95%; margin:0 auto; background: #cccccc; }
+.ad ul li{ width:32%; float:left; display:block; margin-left:2px; margin-bottom:2px; text-align:center; font-size:18px; color:#fff; height:80px;line-height:80px; border-radius:3px; }
+
+
+/*instrct 介绍*/
+.instrct{width:100%}
+.instrct h4{font-size:18px; text-align:center;width:300px;margin:0 auto;padding:0px;}
+.instrct img{display:block; width:100%;margin:10px 10px}
+.instrct p{font-size:14px;line-height:28px; text-align:left;text-indent:2em;padding:0px 10px;}
+
+
+/*openwall */
+
+.openwall{width:100%; padding-top:20px; padding-bottom:20px;  position: absolute; bottom:100px;}
+.openwall a{width:95%; margin:0 auto; height:50px; display:block; text-align:center; line-height:50px; font-size:24px; background:#aec9b3; border-radius:3px; }
+
+
+/* back */
+
+.back{width:100%; padding-top:20px; padding-bottom:20px; position: absolute; bottom:5px; }
+.back a{ width:95%; margin:0 auto; display:block; }
+.back a img { width:80px; height:80px; }
+
+
+
+/* 提现 exchange */
+.B-payT{height:128px;background:#FFD200;}
+.B-payT ul{padding-left:20px;}
+.B-payTm{font-size:16px;color:#7b6500;padding:20px 0px 15px 34px; position:relative;height:20px;}
+.B-payTm i{display:block; position:absolute;left:0px;top:20px;background:url(img/payTicon.png) no-repeat; width:22px;height:20px; background-size:100%;}
+.B-payTn{color:#7b6500;font-size:16px;}
+.B-payTn .B-payRed{color:#f3291f;font-size:50px;} 
+.B-payB{margin:8px;background:#fff; overflow:hidden;}
+.B-payB ul li{height:73px;line-height:73px;font-size:17px;border-bottom:8px solid #f4f4f4;color:#333;padding:0px 10px 0px 68px; position:relative;}
+.B-payB ul li a{color:#333; display:block;background:url(img/iconBj.png) no-repeat right 30px;background-size:8px 15px;}
+.B-payB ul li i{width:48px;height:48px; position:absolute; left:10px; top:12px; display:block;background:url(img/payicon.png) no-repeat; background-size:100%;}
+.B-payB ul li+li i{ background-position:left -48px;}
+.B-payB ul li+li+li i{background-position:left -96px;}
+
+/*Q币充值*/
+.B-payf{overflow:hidden; margin:8px;background:#fff;padding:10px;}
+.B-payi input{height:35px;line-height:45px;border:0px;padding-left:40px;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;outline:none;font-size:18px;color:#b6b6b6; text-align:bottom;}
+.B-payfq{background:url(img/payQ.png) no-repeat 10px 13px;background-size:20px}
+.B-paym{padding-top:10px; position:relative;-webkit-box-sizing:border-box;box-sizing:border-box; position:relative;padding-left:4em}
+.B-paym dt{ position:absolute; width:4em;top:18px;left:0px;}
+.B-paym dd{width:30%; float:left; line-height:40px;height:40px;-webkit-box-sizing:border-box;box-sizing:border-box; position:relative; overflow:hidden;}
+.B-paym dd span{display:block; width:100%;padding-left:18px;}
+.B-paym i{ background:url(img/payficon.png) no-repeat;width:12px;height:12px;background-size:12px 24px; display:block; position:absolute;left:0px; top:14px;}
+.B-paym .current{ background-position:bottom;}
+.B-paym input{ display:none}
+.B-payBtn{background:#E94B35; display:block; text-align:center; color:#fff;height:45px;line-height:45px; border-radius:5px;margin:8px;}
+.B-payBtn:hover{background:#CC412F;}
+
+/*支付宝充值*/
+.B-payfali{background:url(img/payali.png) no-repeat 10px 15px;background-size:20px 17px}
+.payaliTs{line-height:25px;font-size:14px; margin:8px;overflow:hidden;padding:10px;}
+.payaliTs h3{font-size:16px;pading:10px 0px;}
+
+.i-border{border-bottom:1px solid #ccc;border-left:1px solid #ccc;border-right:1px solid #ccc;height:5px;line-height:5px;width:100%; display:block;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.i-borderC{border-bottom:1px solid #FFD200;border-left:1px solid #ccc;border-right:1px solid #ccc;height:5px;line-height:5px;width:100%; display:block;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+/*手机充值*/
+.B-payfp{background:url(img/payPhone.png) no-repeat 10px 12px;background-size:15px 24px}
+
+/* 充值不可用样式 */
+
+
+/*账单明细*/
+.B-detail{padding:8px;}
+.B-detail ul{background:#fff; overflow:hidden;font-size:14px;}
+.B-detail ul li{border-bottom:2px solid #eee; overflow:hidden;padding:0px 5px;}
+.B-detail ul li span{ display:block; float:left;width:50%;color:#777;line-height:40px;height:40px; text-align:center}
+.B-detail ul .B-detTit span{text-align:center;color:#333;font-size:15px;line-height:39px;height:39px;}
+.B-detail ul span+span{width:25%;}
+.B-detail ul span+span+span{width:25%;}
+
+/*账单明细 加载按钮*/
+.footer-info {text-align: center; width: 100%; }
+.link-more {background:#FFD200; display:block; text-align:center;height:45px;line-height:45px; border-radius:5px;margin:8px; color:#5f4e00;}
+.i-account ul .nobg a{background:none}
+
+
+
+/*------------------  account  ------------------*/
+
+
+.account_detail { padding-top:20px; font-size:16px; }
+.account_detail table{ width:96%; margin: 0 auto; }
+.account_detail span{ font-size:16px;  }
+.account_detail td{ font-size:16px;  }
+.account_detail .left{ width:40%; text-align:center; height: 60px; border-bottom:1px solid #cccccc; }
+.account_detail .right{ width:60%; text-align:center; height: 60px; border-bottom:1px solid #cccccc; }
+.account_detail .right_d{ color:#3b83f2; }
+
+
+
+/*------------------  sign  ------------------*/
+
+.sign{}
+.sign li { width:88%; margin:0 auto; display:block; text-align:center; font-size:18px; color:#000000; height:80px;line-height:80px; border-radius:3px; }
+
+.sign_more{}
+.sign_more li { width:88%; margin:0 auto; display:block; text-align:left; font-size:18px; color:#000000; height:30px;line-height:30px; border-radius:3px; }

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.think.memory"
+    android:versionCode="3"
+    android:versionName="1.02" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+    <!-- 网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 下载的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 获取Activity包名权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 可选权限 加上ACCESS_FINE_LOCATION权限，用户将更好的接收到我们的品牌广告 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+
+    <!-- 推送权限配置开始 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="getui.permission.GetuiService.com.o2omobi.wall.sdk.demo" /> <!-- android 5.0必须配置 -->
+    <!-- uses-permission android:name="android.permission.CHANGE_WIFI_STATE" / -->
+
+
+    <!-- 自定义权限 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.o2omobi.wall.sdk.demo"
+        android:protectionLevel="normal" >
+    </permission>
+    <!-- 推送权限配置结束 -->
+
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <!-- 添加对屏幕多分辨率的支持 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.think.memory.StartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.think.memory.note.DetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.MenuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.note.EditNewFileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.GameActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ExchangeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.SignActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.IncomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.BillActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ExchangeRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.HelpActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.HandleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ad.AdwallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ad.YoumiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ad.QumiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ad.O2oActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ad.DuomengActivityj"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.think.memory.ad.YinggaoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 友盟参数设置 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="552d1facfd98c519510005e1" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="taobao" />
+        <!-- 友盟参数设置 -->
+
+
+        <!-- ===================== 友盟更新 began ===================== -->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- ===================== 友盟更新 end  ===================== -->
+
+
+        <!-- ===================== 赢告无限 began ===================== -->
+        <activity
+            android:name="com.winad.android.offers.OffersActivity"
+            android:configChanges="keyboardHidden|orientation|navigation|screenSize" />
+        <!-- ===================== 赢告无限 end ===================== -->
+
+
+        <!-- ===================== 欧托积分墙 began ===================== -->
+
+        <activity
+            android:name="com.otomod.wall.OffersActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 下载服务 -->
+        <service android:name="com.otomod.wall.download.services.DownloadService" />
+
+        <!-- 安装广播监听 -->
+        <receiver android:name="com.otomod.wall.WallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.o2omobi.wall.alarm" />
+            </intent-filter>
+        </receiver>
+        <!-- ===================== 欧托积分墙 end ===================== -->
+
+
+        <!-- =====================  有米广告组件 began ===================== -->
+        <activity
+            android:name="net.youmi.android.AdBrowser"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="net.youmi.android.AdService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="net.youmi.android.ExpService"
+            android:exported="false" >
+        </service>
+
+        <receiver android:name="net.youmi.android.AdReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- =====================  有米广告组件  end  ===================== -->
+
+
+        <!-- =====================  趣米 start  ===================== -->
+        <activity
+            android:name="com.newqm.sdkoffer.QuMiActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <!-- =====================  趣米 end  ===================== -->
+
+
+        <!-- =====================  点乐 began ===================== -->
+        <activity
+            android:name="com.dlnetwork.DevNativeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.dlnetwork.DevNativeService" />
+        <!-- =====================  点乐 end  ===================== -->
+
+
+        <!-- 触控 -->
+        <service
+            android:name="com.chance.engine.AdService"
+            android:exported="true"
+            android:process="com.chance.AdService" >
+            <intent-filter>
+                <action android:name="com.chance.service" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="chance_publisherid"
+            android:value="846547616-08400E-95CD-0876-AB879D5B1" />
+
+        <activity
+            android:name="com.chance.cocoaddemo.WrapperRecommendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.chance.recommend.RecommendActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.chance.recommend.RecommendMoreActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.chance.recommend.RecommendAppDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.chance.recommend.RecommendAppDetailFullScreenImage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar" />
+    </application>
+
+</manifest>
