@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="zepto.min.js"></script>
+</head>
+<body>
+
+	<section >
+		
+		<div class="richang" >
+			<ul>
+				<li onclick="window.love.sign()" style="background:#CE5043" >签到送积分</li>
+				<!--li onclick="window.love.Invitation()" style="background:#B3C833; float:right;" >邀请好友一起赚</li-->
+			</ul>
+		</div>
+		<div class="clearfloat"></div>
+	</section>
+
+	<section>
+		<div class="title" >赚宝地</div>
+		<div class="ad" >
+			<ul>
+				<li style="background:#eF9B34" onclick="showad(1)" >有米</li>
+				<li style="background:#ee3d5e" onclick="showad(2)" >趣米</li>
+				<li style="background:#E94B35" onclick="showad(3)" >多盟</li>
+				<li style="background:#938d5e" onclick="showad(4)" >欧拓</li>
+				<li style="background:#295B35" onclick="showad(5)" >赢告</li>
+			</ul>
+			<ul id="ads">
+				
+			</ul>
+		</div>
+		<div class="clearfloat"></div>
+	</section>
+
+	<section>
+		<div class="tishi" >
+			<h3>温馨提示： </h3>
+
+			<p> 1、100 积分等于1元人民币</p>
+			<p> 2、满5元即可提现, 工作日18小时内到账</p>
+			<p> 3、趣米,欧拓的应用安装后必须从平台打开才会返回积分</p>
+			<p> 4、其他问题, 请加QQ群：299399120 </p>
+		</div>
+	</section>
+	
+<script >
+
+function showad(n){
+	love.startAd(n);
+}
+function setAd(name,color,platid){
+	var adHtml = '<li style="background:#'+color+'" onclick="showad('+platid+')" >'+name+'</li>';
+	$("#ads").append(adHtml);
+}
+
+</script>
+</body>
+</html>
