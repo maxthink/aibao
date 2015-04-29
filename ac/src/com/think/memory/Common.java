@@ -4,8 +4,15 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.think.memory.util.Api;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
@@ -34,7 +41,7 @@ public class Common {
 	public static String myinvitecode = "";
 	public static String nick = "";
 	public static boolean is_sign = false;
-	public static JSONArray ads ;
+	public static JSONArray plat ;
 	
 	// 广告显示配置
 	public static boolean show_sign = false;
@@ -215,7 +222,4 @@ public class Common {
 		SharedPreferences sp=(SharedPreferences) mContext.getSharedPreferences(whichSp, 0);
 		sp.edit().putInt(field, value).commit();
 	}
-	
-	
-
 }

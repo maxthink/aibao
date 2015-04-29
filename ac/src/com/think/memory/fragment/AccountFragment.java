@@ -56,13 +56,15 @@ public class AccountFragment extends Fragment {
 		@Override
 		public void onPageFinished(WebView view, String url) {
 			
-			GetInfo getinfo =new GetInfo();
-			getinfo.execute();
+			//GetInfo getinfo =new GetInfo();
+			//getinfo.execute();
 			
 			//如果设置最后加载图片, 现在开始加载图片
 			if (!webView.getSettings().getLoadsImagesAutomatically()) {
 				webView.getSettings().setLoadsImagesAutomatically(true);
 			}
+			
+			initSomeData();
 		}
 
 	}
@@ -177,14 +179,14 @@ public class AccountFragment extends Fragment {
 	}
 	
 	
-	public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if( getUserVisibleHint() ) {
-            //initSomeData();
-        }else{
-        	Log.e("account", "visib: false ");
-        }
-    }
+//	public void setUserVisibleHint(boolean isVisibleToUser) {
+//        super.setUserVisibleHint(isVisibleToUser);
+//        if( getUserVisibleHint() ) {
+//            initSomeData();
+//        }else{
+//        	Log.e("account", "visib: false ");
+//        }
+//    }
 	
 	private void initSomeData()
 	{

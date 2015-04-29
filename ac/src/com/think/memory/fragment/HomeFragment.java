@@ -77,11 +77,11 @@ public class HomeFragment extends Fragment {
 	
 	private void showAds(){
 
-		if(Common.ads != null){
+		if(Common.plat != null){
 			//jsonData的数据格式：[{ "id": "27JpL~jd99w9nM01c000qc", "version": "abc" },{ "id": "27JpL~j6UGE0LX00s001AH", "version": "bbc" },{ "id": "27JpL~j7YkM0LX01c000gt", "version": "Wa_" }]
-			for (int i = 0; i < Common.ads.length(); i++) {
+			for (int i = 0; i < Common.plat.length(); i++) {
 				try {
-					JSONObject temp = (JSONObject) Common.ads.get(i);
+					JSONObject temp = (JSONObject) Common.plat.get(i);
 					String name = temp.getString("name");
 					String color = temp.getString("color");
 					String platid = temp.getString("plat_id");
@@ -207,38 +207,6 @@ public class HomeFragment extends Fragment {
 		}
 	}
 	
-	public String getDeviceInfo(Context context) {
-	    try{
-	      org.json.JSONObject json = new org.json.JSONObject();
-	      android.telephony.TelephonyManager tm = (android.telephony.TelephonyManager) context
-	          .getSystemService(Context.TELEPHONY_SERVICE);
-	
-	      String device_id = tm.getDeviceId();
-	
-	      android.net.wifi.WifiManager wifi = (android.net.wifi.WifiManager) context.getSystemService(Context.WIFI_SERVICE);
-	
-	      String mac = wifi.getConnectionInfo().getMacAddress();
-	      json.put("mac", mac);
-	      Log.e("mac",mac);
-	
-	      if( TextUtils.isEmpty(device_id) ){
-	        device_id = mac;
-	      }
-	
-	      if( TextUtils.isEmpty(device_id) ){
-	        device_id = android.provider.Settings.Secure.getString(context.getContentResolver(),android.provider.Settings.Secure.ANDROID_ID);
-	      }
-	
-	      json.put("device_id", device_id);
-	      Log.e("device_id",device_id);
-	
-	      return json.toString();
-	    }catch(Exception e){
-	      e.printStackTrace();
-	    }
-	  return null;
-	}
-
 	// 签到
 	@JavascriptInterface
 	public void sign() {
@@ -251,8 +219,6 @@ public class HomeFragment extends Fragment {
 			Common.showMsg(getActivity(), "今日已签到", 1000);
 		}
 		
-		
-		getDeviceInfo(getActivity());
 	}
 	
 	// 签到
@@ -297,8 +263,6 @@ public class HomeFragment extends Fragment {
 							show_chapin();
 						}
 						startActivity(new Intent(getActivity(), IncomeActivity.class));
-
-						
 
 					} else {
 						Common.showMsg(getActivity(), msg, Toast.LENGTH_LONG );

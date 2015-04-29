@@ -15,6 +15,7 @@ import com.think.memory.fragment.AccountFragment;
 import com.think.memory.fragment.ExchangeFragment;
 import com.think.memory.fragment.HomeFragment;
 import com.think.memory.util.Api;
+import com.think.memory.util.GetInfo;
 import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
@@ -221,97 +222,15 @@ public class MenuActivity extends FragmentActivity implements OnClickListener {
 
 		checkUpdate();
 		
-		GetInfo getinfo =new GetInfo();
+		GetInfo getinfo =new GetInfo(this);
 		getinfo.execute();
 	}
 	
 	//刷新数据
 	public  void refreshData()
 	{
-		GetInfo getinfo =new GetInfo();
+		GetInfo getinfo =new GetInfo(this);
 		getinfo.execute();
-	}
-
-	
-	class GetInfo extends AsyncTask<Object, Integer, String> {
-
-		public GetInfo() {
-		}
-
-		protected String doInBackground(Object... params) {
-
-			String imei = ""; // 获取手机的did
-
-			TelephonyManager tm = (TelephonyManager) MenuActivity.this
-					.getSystemService(Context.TELEPHONY_SERVICE);
-			if (tm.getDeviceId() != null) {
-				imei = tm.getDeviceId();
-			}
-
-			return Api.getInfo(imei);
-		}
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-		}
-
-		@SuppressLint("ParserError")
-		@Override
-		protected void onPostExecute(String result) {
-			Log.e("menu", "onPostExecute: " + result);
-			if (result == null || result == "") {
-				Log.e("menu", "onPostExecute: null");
-			} else if (result.equals("false")) {
-				Log.e("menu", "onPostExecute: false");
-			} else {
-
-				try {
-
-					JSONObject res = new JSONObject(result);
-
-					String status = res.getString("status");
-
-					if (status.equals("0")) {
-						int today = res.getInt("today");
-						int total = res.getInt("total");
-						int score = res.getInt("score");						
-						int uid = res.getInt("uid");						
-						int task_count = res.getInt("task_count");
-						int exchange_count = res.getInt("exchange_count");
-						int servertime = res.getInt("timestamp");
-						String nick = res.getString("nick");
-						JSONArray ads = res.getJSONArray("ads");
-						
-						Common.getScore = false; // 设置不用获取用户信息
-						
-						Common.server_time = servertime;
-						Common.client_time = (int) (System.currentTimeMillis() / 1000);
-						
-						Common.show_ok = true;
-						Common.uid = uid;
-						Common.score = score;
-						Common.today = today;
-						Common.total = total;
-						Common.nick = nick;
-						Common.task_count = task_count;
-						Common.exchange_count = exchange_count;
-						Common.ads = ads;
-
-						Log.e("menu", "server time " + servertime);
-						Log.e("menu", "client time " + Common.client_time);
-						
-						
-					} else {
-						Common.showMsg(MenuActivity.this, "用户信息获取错误", 1000);
-					}
-
-				} catch (JSONException ex) {
-					Log.e("menu", ex.getMessage());
-				}
-
-			}
-		}
 	}
 
 	// 检查软件更新
