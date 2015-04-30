@@ -65,7 +65,7 @@ public class GetInfo extends AsyncTask<Object, Integer, String> {
 					Common.show_sign	= res.getBoolean("show_sign");
 					Common.show_end		= res.getBoolean("show_end");
 					
-					Common.getScore		= false; // 设置不用获取用户信息
+					Common.getInfo		= false; // 设置不用获取用户信息
 					Common.show_ok		= true;
 					Common.client_time	= (int) (System.currentTimeMillis() / 1000);
 					
