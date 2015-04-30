@@ -132,7 +132,7 @@ public class QumiActivity extends Activity implements OnClickListener,QuMiNotifi
 				if( result.equals("true") ){
 					
 					Toast.makeText(QumiActivity.this, "获得积分: "+score, Toast.LENGTH_SHORT).show();
-					Common.getScore = true;	//积分变动, 信息重新获取
+					Common.getInfo = true;	//积分变动, 信息重新获取
 					
 					//减去sdk所加积分, 服务器添加新增积分
 					QuMiConnect.getQumiConnectInstance().spendPoints(QumiActivity.this, score);

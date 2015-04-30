@@ -31,7 +31,7 @@ public class Common {
 	// 用户信息
 	public static boolean show_ok = false;
 	public static int uid = 0; 				//uid
-	public static boolean getScore = true;	//金币信息是否用刷新,
+	
 	public static double score = 0;			//当前金币
 	public static double today = 0;			//今天赚取的金币
 	public static double total = 0;			//总共赚取过的金币
@@ -43,6 +43,9 @@ public class Common {
 	public static boolean is_sign = false;
 	public static JSONArray plat ;
 	public static JSONArray did ;
+	
+	//用户信息是否用刷新
+	public static boolean getInfo = true;	
 	
 	// 广告显示配置
 	public static boolean show_sign = false;
@@ -132,21 +135,21 @@ public class Common {
 		Common.total += score;
 		Common.score += score;
 		Common.task_count += 1;
-		Common.getScore = true;
+		Common.getInfo = true;
 	}
 	
 	public static void addScore_sign(int score){
 		Common.today += score;
 		Common.total += score;
 		Common.score += score;
-		Common.getScore = true;
+		Common.getInfo = true;
 		Common.is_sign = true;
 	}
 	
 	public static void exchage(int score){
 		Common.exchange_count +=1;
 		Common.score -= score;
-		Common.getScore = true;
+		Common.getInfo = true;
 	}
 
 

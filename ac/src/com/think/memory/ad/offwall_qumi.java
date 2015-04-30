@@ -151,7 +151,7 @@ public class offwall_qumi{
 				Log.e("onPostExecute", result);
 				if( result.equals("true") ){
 					Common.showMsg(mContext, "获得积分: "+score, 1000);
-					Common.getScore = true;	//积分变动, 信息重新获取
+					Common.getInfo = true;	//积分变动, 信息重新获取
 				}else{
 					Common.showMsg(mContext, "请求错误", 1000);
 				}

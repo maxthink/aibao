@@ -389,7 +389,9 @@ public class HomeFragment extends Fragment {
 		// TODO Auto-generated method stub
 		Log.e("home", "onresume");
 		super.onResume();
-
+		
+		showAds(); //显示广告列表
+		
 		duomeng_checkPoints();
 
 	}
