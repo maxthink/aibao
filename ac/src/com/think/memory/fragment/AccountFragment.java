@@ -1,23 +1,17 @@
 package com.think.memory.fragment;
 
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.think.memory.R;
 import com.think.memory.Common;
 import com.think.memory.ExchangeRecordActivity;
 import com.think.memory.HelpActivity;
 import com.think.memory.IncomeActivity;
-import com.think.memory.util.Api;
+import com.think.memory.util.GetInfo;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -100,6 +94,20 @@ public class AccountFragment extends Fragment {
 			webView.loadUrl( "javascript:initInfo2("+Common.task_count+","+Common.exchange_count+")" );
 		}
 	}
+	
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		Log.e("home", "onresume");
+		super.onResume();
+		
+		if(Common.getInfo){
+			GetInfo getinfo =new GetInfo(getActivity() );
+			getinfo.execute();
+		}
+		
+	}
+
 
 }
 

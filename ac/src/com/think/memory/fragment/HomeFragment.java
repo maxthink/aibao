@@ -16,15 +16,15 @@ import com.think.memory.Common;
 import com.think.memory.ad.QumiActivity;
 import com.think.memory.ad.YinggaoActivity;
 import com.think.memory.ad.YoumiActivity;
+import com.think.memory.util.AddScore;
 import com.think.memory.util.Api;
+import com.think.memory.util.GetInfo;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +63,8 @@ public class HomeFragment extends Fragment {
 		
 		@Override
 		public void onPageFinished(WebView view, String url) {
-
+			
+			Common.log("", "webclient onPageFnished ");
 			showAds();
 			
 			// 如果设置最后加载图片, 现在开始加载图片
@@ -76,7 +77,7 @@ public class HomeFragment extends Fragment {
 	
 	@JavascriptInterface
 	private void showAds(){
-
+		Common.log("", "showAds");
 		if(Common.plat != null){
 			
 			for (int i = 0; i < Common.plat.length(); i++) {
@@ -98,8 +99,6 @@ public class HomeFragment extends Fragment {
 		
 	}
 	
-	
-
 	// 打开广告应用
 	public void startAd(int ad) throws JSONException {
 		Log.e("home", "startAd " + ad);
@@ -212,7 +211,7 @@ public class HomeFragment extends Fragment {
 						+ "\n剩余积分:" + pointEarned);
 				if (pointEarned > 0) {
 
-					new AddScore(Common.platform_duomeng, pointEarned).execute();
+					new AddScore(getActivity(), Common.platform_duomeng, pointEarned).execute();
 
 					DAOW.getInstance(getActivity()).consumePoints(pointEarned,new DListener() {
 
@@ -234,46 +233,6 @@ public class HomeFragment extends Fragment {
 			}
 
 		});
-	}
-
-	class AddScore extends AsyncTask<Object, Integer, String> {
-
-		private int score;
-		private int platform;
-
-		private AddScore(int platform, int score) {
-			this.score = score;
-			this.platform = platform;
-		}
-
-		protected String doInBackground(Object... params) {
-			if (score > 0) {
-				return Api.addScore( platform, score);
-			} else {
-				return null;
-			}
-		}
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-		}
-
-		@Override
-		protected void onPostExecute(String result) {
-
-			if (result == null) {
-				Common.showMsg(getActivity(), "请求错误", Toast.LENGTH_LONG );
-			} else {
-				Log.e("onPostExecute", result);
-				if (result.equals("true")) {
-					Common.showMsg(getActivity(), "获得积分: " + score, Toast.LENGTH_LONG );
-					Common.addScore_task(score);
-				} else {
-					Common.showMsg(getActivity(), "请求错误", 1000);
-				}
-			}
-		}
 	}
 	
 	// 签到
@@ -322,7 +281,8 @@ public class HomeFragment extends Fragment {
 					res = new JSONObject(result);
 					status = res.getInt("status");
 					String msg = res.getString("msg");
-
+					Common.log("", "status:"+status);
+					
 					if (status == 0) {
 						int score = res.getInt("score");
 						Common.showMsg(getActivity(), msg, Toast.LENGTH_LONG );
@@ -333,9 +293,11 @@ public class HomeFragment extends Fragment {
 						}
 						startActivity(new Intent(getActivity(), IncomeActivity.class));
 
-					} else {
+					} else if(status==1)  {
+						Common.showMsg(getActivity(), msg, 2000);
+						Common.is_sign=true;
+					}else{
 						Common.showMsg(getActivity(), msg, Toast.LENGTH_LONG );
-						
 					}
 				} catch (JSONException e) {
 
@@ -347,8 +309,7 @@ public class HomeFragment extends Fragment {
 		}
 
 	}
-	
-	
+		
 	public void show_chapin(){
 		
 		// 展示插播广告，可以不调用loadSpot独立使用
@@ -377,7 +338,6 @@ public class HomeFragment extends Fragment {
 		
 	}
 
-
 	public void onStart() {
 		super.onStart();
 		Log.e("home", "onstart");
@@ -390,7 +350,10 @@ public class HomeFragment extends Fragment {
 		Log.e("home", "onresume");
 		super.onResume();
 		
-		showAds(); //显示广告列表
+		if(Common.getInfo){
+			GetInfo getinfo =new GetInfo(getActivity() );
+			getinfo.execute();
+		}
 		
 		duomeng_checkPoints();
 

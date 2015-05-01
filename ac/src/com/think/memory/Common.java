@@ -4,15 +4,8 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.think.memory.util.Api;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;

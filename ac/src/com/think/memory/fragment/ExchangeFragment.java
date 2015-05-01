@@ -9,11 +9,9 @@ import com.think.memory.util.Api;
 import com.think.memory.view.LoadingDialog;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;

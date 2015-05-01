@@ -1,9 +1,5 @@
 package com.think.memory;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import net.youmi.android.AdManager;
 import net.youmi.android.spot.SpotDialogListener;
 import net.youmi.android.spot.SpotManager;
@@ -14,18 +10,13 @@ import com.think.memory.HelpActivity;
 import com.think.memory.fragment.AccountFragment;
 import com.think.memory.fragment.ExchangeFragment;
 import com.think.memory.fragment.HomeFragment;
-import com.think.memory.util.Api;
 import com.think.memory.util.GetInfo;
 import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.update.UmengUpdateAgent;
-import com.umeng.update.UpdateConfig;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -35,8 +26,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -226,13 +215,6 @@ public class MenuActivity extends FragmentActivity implements OnClickListener {
 		getinfo.execute();
 	}
 	
-	//刷新数据
-	public  void refreshData()
-	{
-		GetInfo getinfo =new GetInfo(this);
-		getinfo.execute();
-	}
-
 	// 检查软件更新
 	private void checkUpdate() {
 

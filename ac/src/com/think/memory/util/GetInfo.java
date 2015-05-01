@@ -12,7 +12,9 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 public class GetInfo extends AsyncTask<Object, Integer, String> {
+	
 	private Context context;
+	
 	public GetInfo(Context context) {
 		this.context = context;
 	}

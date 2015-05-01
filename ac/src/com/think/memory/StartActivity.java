@@ -1,9 +1,7 @@
 package com.think.memory;
 
 import com.think.memory.R;
-import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.update.UpdateConfig;
 
 import android.app.Activity;
 import android.content.Intent;
