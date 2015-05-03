@@ -14,15 +14,14 @@ public class Common {
 	
 	//客户端数据
 	public final static String appname = "爱赚宝 - 手机赚钱";
-	public final static String VERSION = "V1.01";
-	public final static String version_code = "2";
+	public final static String VERSION = "V1.1";
+	public final static String version_code = "3";
 	public final static String config = "config";
-	public final static int rate = 100;			//积分/rmb 的比率, 就是多少积分兑换多少人民币, 设置为100, 就是100积分为一元人民币
+	public final static int rate = 100;		//积分/rmb 的比率, 就是多少积分兑换多少人民币, 设置为100, 就是100积分为一元人民币
 	public static int client_time = 1;		//客户端时间
 	public static int server_time = 1;		//服务器时间
 	
 	// 用户信息
-	public static boolean show_ok = false;
 	public static int uid = 0; 				//uid
 	
 	public static double score = 0;			//当前金币
@@ -38,7 +37,9 @@ public class Common {
 	public static JSONArray did ;
 	
 	//用户信息是否用刷新
-	public static boolean getInfo = true;	
+	public static boolean getInfo = true;
+	public static boolean getdata_ok = false;	//信息加载成功，显示信息
+	public static int	refreash_time = 1;
 	
 	// 广告显示配置
 	public static boolean show_sign = false;

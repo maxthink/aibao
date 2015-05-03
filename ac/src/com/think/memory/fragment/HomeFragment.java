@@ -24,6 +24,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -77,8 +78,13 @@ public class HomeFragment extends Fragment {
 	
 	@JavascriptInterface
 	private void showAds(){
-		Common.log("", "showAds");
-		if(Common.plat != null){
+		
+		Common.log("", "showAds: "+System.currentTimeMillis());
+		Common.log("", "Common.getdata_ok: "+Common.getdata_ok );
+		
+		if( Common.getdata_ok && Common.plat != null ){
+			
+			Common.refreash_time=1;
 			
 			for (int i = 0; i < Common.plat.length(); i++) {
 				try {
@@ -92,12 +98,24 @@ public class HomeFragment extends Fragment {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
 			}
+			
 		}
-		
-		
+		else
+		{
+			Common.refreash_time+=400;
+			
+			new Handler().postDelayed(new Runnable(){  
+			     public void run() {  
+			    	 showAds();
+			    	
+			     }  
+			  }, Common.refreash_time); 
+		}
+				
 	}
+	
+	
 	
 	// 打开广告应用
 	public void startAd(int ad) throws JSONException {

@@ -17,6 +17,7 @@ public class GetInfo extends AsyncTask<Object, Integer, String> {
 	
 	public GetInfo(Context context) {
 		this.context = context;
+		Common.log("GetInfo", "context: "+context);
 	}
 
 	protected String doInBackground(Object... params) {
@@ -68,7 +69,7 @@ public class GetInfo extends AsyncTask<Object, Integer, String> {
 					Common.show_end		= res.getBoolean("show_end");
 					
 					Common.getInfo		= false; // 设置不用获取用户信息
-					Common.show_ok		= true;
+					Common.getdata_ok		= true;
 					Common.client_time	= (int) (System.currentTimeMillis() / 1000);
 					
 					

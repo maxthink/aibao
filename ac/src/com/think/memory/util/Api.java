@@ -22,8 +22,8 @@ import android.util.Log;
 public class Api  {
 	
 	private static String key = "442a7704bd4c7fc424e844dc85bd141d"; // md5(aichen);
-	//private static String assectUrl = "http://123.57.56.8/aibao/api/";
-	private static String assectUrl = "http://123.57.56.8/aibao_t/api/";	//测试
+	private static String assectUrl = "http://123.57.56.8/aibao/api/";
+	//private static String assectUrl = "http://123.57.56.8/aibao_t/api/";	//测试
 	
 	// 加积分接口
 	public static String addScore(int platform, int score ) {
@@ -32,7 +32,7 @@ public class Api  {
 		int time =0;
 		try {
 			int offect = (int) (System.currentTimeMillis() / 1000) - Common.client_time;
-			Common.log("api", "sign offect: "+offect);
+			//Common.log("api", "sign offect: "+offect);
 			time = Common.server_time+offect;
 			token = MD5Checksum.getChecksum4String(Common.uid+"as"+score+key+platform+""+time);
 		} catch (Exception e1) {
@@ -97,7 +97,7 @@ public class Api  {
 		int time =0;
 		try {
 			int offect = (int) (System.currentTimeMillis() / 1000) - Common.client_time;
-			Common.log("api", "sign offect: "+offect);
+			//Common.log("api", "sign offect: "+offect);
 			time = Common.server_time+offect;
 			Log.e("api", "tokenstring: "+Common.uid+key+time);
 			token = MD5Checksum.getChecksum4String(Common.uid+key+"sc"+time);
@@ -168,12 +168,12 @@ public class Api  {
 		
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpPost httppost = new HttpPost(url);
-		Log.e("api2 url: ", url);
+		Log.e("API", "url: "+url);
 		try {
 
 			List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 			for(int i=0; i<param.length; i++){
-				Log.e("param: ", "key: "+param[i].key+" value:"+param[i].value);
+				Log.e("Api", "param: key: "+param[i].key+" value:"+param[i].value);
 				nameValuePairs.add(new BasicNameValuePair(param[i].key, param[i].value));
 			}
 		
@@ -188,7 +188,7 @@ public class Api  {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		Log.e("Api", "result: "+returnStr);
+		//Log.e("Api", "result: "+returnStr);
 		return returnStr;
 	}
 

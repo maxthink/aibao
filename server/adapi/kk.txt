@@ -1,0 +1,350 @@
+Array
+(
+)
+Array
+(
+    [order] => YM150407TQx8KO7cde
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 5
+    [price] => 0.1
+    [time] => 1428372305
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 1
+    [sig] => 89cc88ee
+)
+Array
+(
+    [order] => YM150407fiOVDW11f2
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 4
+    [price] => 0.098
+    [time] => 1428372542
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 2
+    [sig] => c6a94544
+)
+Array
+(
+)
+Array
+(
+    [order] => YM150407TQx8KO7cde
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 5
+    [price] => 0.1
+    [time] => 1428372305
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 1
+    [sig] => 89cc88ee
+)
+Array
+(
+    [order] => YM150407TQx8KO7cde
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 5
+    [price] => 0.1
+    [time] => 1428372305
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 1
+    [sig] => 89cc88ee
+)
+Array
+(
+    [order] => YM150407TQx8KO7cde
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 5
+    [price] => 0.1
+    [time] => 1428372305
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 1
+    [sig] => 89cc88ee
+)
+Array
+(
+    [order] => YM150407TQx8KO7cde
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 5
+    [price] => 0.1
+    [time] => 1428372305
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 1
+    [sig] => 89cc88ee
+)
+Array
+(
+    [order] => YM150407TQx8KO7cde
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 5
+    [price] => 0.1
+    [time] => 1428372305
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 1
+    [sig] => 89cc88ee
+)
+Array
+(
+    [order] => YM150407fiOVDW11f2
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 4
+    [price] => 0.098
+    [time] => 1428372542
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 2
+    [sig] => c6a94544
+)
+Array
+(
+    [order] => YM150407fiOVDW11f2
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 4
+    [price] => 0.098
+    [time] => 1428372542
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 2
+    [sig] => c6a94544
+)
+Array
+(
+    [order] => YM150407fiOVDW11f2
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 4
+    [price] => 0.098
+    [time] => 1428372542
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 2
+    [sig] => c6a94544
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.6
+    [unit] => 24.0
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "1"}
+    [order_id] => 7d93c2a83d7ce5d102aee03583f299b0
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.6
+    [unit] => 24
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "1"}
+    [order_id] => 7d93c2a83d7ce5d102aee03583f299b0
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.6
+    [unit] => 24
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "1"}
+    [order_id] => 7d93c2a83d7ce5d102aee03583f299b0
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.6
+    [unit] => 24
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "1"}
+    [order_id] => 7d93c2a83d7ce5d102aee03583f299b0
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.6
+    [unit] => 24
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "1"}
+    [order_id] => 7d93c2a83d7ce5d102aee03583f299b0
+)
+Array
+(
+    [key] => 1
+    [pay] => 7
+    [rid] => 6d472067aa816c2b00e374dd4fe60fe7
+    [n] => 0
+    [m] => b260d69c9c5ad0388edad16f06bf58b5
+    [pn] => com.soufun.app
+    [appname] => 搜房网
+)
+Array
+(
+    [key] => 1
+    [pay] => 7
+    [rid] => 6d472067aa816c2b00e374dd4fe60fe7
+    [n] => 0
+    [m] => b260d69c9c5ad0388edad16f06bf58b5
+    [pn] => com.soufun.app
+    [appname] => 搜房网
+)
+Array
+(
+    [key] => 1
+    [pay] => 7
+    [rid] => 6d472067aa816c2b00e374dd4fe60fe7
+    [n] => 0
+    [m] => b260d69c9c5ad0388edad16f06bf58b5
+    [pn] => com.soufun.app
+    [appname] => 搜房网
+)
+Array
+(
+    [key] => 1
+    [pay] => 7
+    [rid] => 6d472067aa816c2b00e374dd4fe60fe7
+    [n] => 0
+    [m] => b260d69c9c5ad0388edad16f06bf58b5
+    [pn] => com.soufun.app
+    [appname] => 搜房网
+)
+Array
+(
+    [key] => 1
+    [pay] => 11
+    [rid] => 62081c7c52ec30c556d6c558896983ee
+    [n] => 0
+    [m] => aa863d42db4a73c5d23fd0468a356a8b
+    [pn] => com.dp.android.elong
+    [appname] => 艺龙旅行
+)
+Array
+(
+    [order] => YM150408rFrdu7bG84
+    [app] => f6f4cd68be715a2d
+    [ad] => 三国群英
+    [pkg] => net.joywii.qysg2d.kkk
+    [user] => 10000
+    [chn] => 0
+    [points] => 25
+    [price] => 0.5
+    [time] => 1428471500
+    [device] => 359209020227033
+    [adid] => 10731
+    [trade_type] => 1
+    [sig] => b57dd54a
+)
+Array
+(
+    [order] => YM150409bD7XMJQ005
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 24
+    [price] => 0.497
+    [time] => 1428557994
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 2
+    [sig] => be21c33f
+)
+Array
+(
+    [order] => YM150409xcASl3Cf5b
+    [app] => f6f4cd68be715a2d
+    [ad] => 暴打魏蜀吴
+    [pkg] => com.zhancheng.sanguolua.youmi
+    [user] => 1
+    [chn] => 0
+    [points] => 50
+    [price] => 1.001
+    [time] => 1428560052
+    [device] => 359209020227033
+    [adid] => 10222
+    [trade_type] => 2
+    [sig] => fac02bbe
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 1.0
+    [unit] => 40.0
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "10000"}
+    [order_id] => 45eff424d115ba938231f861e5a2a4f4
+)
+Array
+(
+    [key] => 10000
+    [pay] => 3
+    [rid] => 62081c7c52ec30c556d6c558896983ee
+    [n] => 1
+    [m] => 47ef96ffd329d67757f4ee3e5b116eda
+    [pn] => com.dp.android.elong
+    [appname] => 艺龙旅行
+)
+Array
+(
+    [order] => YM150410NIHo0RjKdf
+    [app] => f6f4cd68be715a2d
+    [ad] => 三国群英
+    [pkg] => net.joywii.qysg2d.kkk
+    [user] => 10000
+    [chn] => 0
+    [points] => 14
+    [price] => 0.28
+    [time] => 1428642588
+    [device] => 359209020227033
+    [adid] => 10731
+    [trade_type] => 2
+    [sig] => 75e12a11
+)

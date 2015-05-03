@@ -15,6 +15,7 @@ import com.newqm.sdkoffer.QuMiNotifier;
 import com.think.memory.R;
 import com.think.memory.Common;
 import com.think.memory.util.Api;
+import com.think.memory.util.GetInfo;
 
 public class QumiActivity extends Activity implements OnClickListener,QuMiNotifier {
 
@@ -50,9 +51,13 @@ public class QumiActivity extends Activity implements OnClickListener,QuMiNotifi
 	
 	public void onRestart(){
 		super.onRestart();
+		
 		Log.e("qumi", "onRestart");
+		
+		Common.getInfo=true;	//重新获取用户信息去
+		
 		finish();
-		//startActivity( new Intent(QumiActivity.this, MainActivity.class));
+
 	}
 	
 	public void onResume(){

@@ -1,0 +1,229 @@
+Array
+(
+)
+Array
+(
+    [order] => YM150423Y9EIUaJWdd
+    [app] => 2a460bb8674551c5
+    [ad] => 唱吧
+    [pkg] => com.changba
+    [user] => 1
+    [chn] => 0
+    [points] => 21
+    [price] => 0.43
+    [time] => 1429778847
+    [device] => 359209020227033
+    [adid] => 11415
+    [trade_type] => 1
+    [sig] => 4d41d82d
+)
+Array
+(
+    [order] => YM150423RPetlFWl6f
+    [app] => 2a460bb8674551c5
+    [ad] => 唱吧
+    [pkg] => com.changba
+    [user] => 1
+    [chn] => 0
+    [points] => 3
+    [price] => 0.07
+    [time] => 1429779694
+    [device] => 359209020227033
+    [adid] => 11415
+    [trade_type] => 2
+    [sig] => f1416c2a
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.6
+    [unit] => 24.0
+    [openudid] => db312915a84a1a9c
+    [extra_data] => {"uid": "10"}
+    [order_id] => c0b895eba00b0abff750324bc31434c6
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 1.2
+    [unit] => 48.0
+    [openudid] => db312915a84a1a9c
+    [extra_data] => {"uid": "10"}
+    [order_id] => e6cf2c2a40f66db85891160e12c98fc9
+)
+Array
+(
+    [type_value] => 140
+    [type_code] => sign_in
+    [money] => 0.3
+    [openudid] => db312915a84a1a9c
+    [unit] => 12.0
+    [extra_data] => {"uid": "10"}
+    [order_id] => fe9b040760d35b75163eee977c913ec2
+    [advert_id] => 5523a7e4e13823942e05444e
+    [days] => 1
+)
+Array
+(
+    [type_value] => 140
+    [type_code] => sign_in
+    [money] => 0.3
+    [openudid] => db312915a84a1a9c
+    [unit] => 12.0
+    [extra_data] => {"uid": "10"}
+    [order_id] => 6cd13b9fba56764bd00bbb1d8e534198
+    [advert_id] => 54c8ba04747e565e3fe4b710
+    [days] => 1
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 0.48
+    [unit] => 19.2
+    [openudid] => db312915a84a1a9c
+    [extra_data] => {"uid": "10"}
+    [order_id] => a2f9ceaa467b18bc9ade05755bcab7e0
+)
+Array
+(
+    [type_value] => 140
+    [type_code] => sign_in
+    [money] => 0.3
+    [openudid] => db312915a84a1a9c
+    [unit] => 12.0
+    [extra_data] => {"uid": "10"}
+    [order_id] => 6ff9a292a93b4d7546bac1626ee111b6
+    [advert_id] => 552b483ee138231b67f71f96
+    [days] => 1
+)
+Array
+(
+    [order] => YM150429LFMwKBpga3
+    [app] => 2a460bb8674551c5
+    [ad] => 360好搜
+    [pkg] => com.qihoo.haosou
+    [user] => 1
+    [chn] => 0
+    [points] => 31
+    [price] => 0.63
+    [time] => 1430314080
+    [device] => 359209020227033
+    [adid] => 11111
+    [trade_type] => 1
+    [sig] => fc8b9b95
+)
+Array
+(
+    [order] => YM150429J-7CXPQ-7f
+    [app] => 2a460bb8674551c5
+    [ad] => 360好搜
+    [pkg] => com.qihoo.haosou
+    [user] => 1
+    [chn] => 0
+    [points] => 7
+    [price] => 0.14
+    [time] => 1430317933
+    [device] => 359209020227033
+    [adid] => 11111
+    [trade_type] => 2
+    [sig] => 23da2f66
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 1.0
+    [unit] => 50.0
+    [openudid] => db312915a84a1a9c
+    [extra_data] => {"uid": "10"}
+    [order_id] => f0150107ea536af6af980c10811a1add
+)
+Array
+(
+    [order] => YM150430w7LQONmN92
+    [app] => 2a460bb8674551c5
+    [ad] => 终极抢战
+    [pkg] => com.sy4399.zjqz
+    [user] => 10
+    [chn] => 0
+    [points] => 50
+    [price] => 1
+    [time] => 1430361035
+    [device] => 352273017386340
+    [adid] => 11691
+    [trade_type] => 1
+    [sig] => 43caa143
+)
+Array
+(
+    [order] => YM150430jDkzAcNp91
+    [app] => 2a460bb8674551c5
+    [ad] => 360好搜
+    [pkg] => com.qihoo.haosou
+    [user] => 1
+    [chn] => 0
+    [points] => 10
+    [price] => 0.21
+    [time] => 1430363801
+    [device] => 359209020227033
+    [adid] => 11111
+    [trade_type] => 2
+    [sig] => 2f139147
+)
+Array
+(
+    [order] => YM1504304dDzcNMu11
+    [app] => 2a460bb8674551c5
+    [ad] => 爱音乐
+    [pkg] => com.gwsoft.imusic.controller
+    [user] => 1
+    [chn] => 0
+    [points] => 29
+    [price] => 0.595
+    [time] => 1430373804
+    [device] => 359209020227033
+    [adid] => 10999
+    [trade_type] => 1
+    [sig] => 0f2f7586
+)
+Array
+(
+    [type_value] => 140
+    [type_code] => sign_in
+    [money] => 0.18
+    [openudid] => db312915a84a1a9c
+    [unit] => 9.0
+    [extra_data] => {"uid": "10"}
+    [order_id] => 3f36fc93d07acddf88353b29d723dac6
+    [advert_id] => 55405c92e13823af4c09778f
+    [days] => 1
+)
+Array
+(
+    [type_value] => 3
+    [type_code] => activation
+    [money] => 1.0
+    [unit] => 50.0
+    [openudid] => 9e443faec93854e9
+    [extra_data] => {"uid": "1"}
+    [order_id] => 3f32da9d8489a3103c4a20d1a36e8117
+)
+Array
+(
+    [order] => YM150503a3cnpUdY09
+    [app] => 2a460bb8674551c5
+    [ad] => 360好搜
+    [pkg] => com.qihoo.haosou
+    [user] => 1
+    [chn] => 0
+    [points] => 10
+    [price] => 0.21
+    [time] => 1430626906
+    [device] => 359209020227033
+    [adid] => 11111
+    [trade_type] => 2
+    [sig] => e5a77f3a
+)

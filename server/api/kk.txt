@@ -1,0 +1,49 @@
+Array
+(
+    [token] => 65019f2a277406834169b8ed2deaea47
+    [uid] => 1
+    [score] => 8
+    [platform] => 5
+    [versioncode] => 2
+    [time] => 1430627241
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)
+Array
+(
+    [token] => 72b814adcf35937b272b17eb0de9c310
+    [imei] => 359209020227033
+)

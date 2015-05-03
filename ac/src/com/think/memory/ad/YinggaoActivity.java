@@ -1,6 +1,7 @@
 package com.think.memory.ad;
 
 import com.think.memory.Common;
+import com.think.memory.util.GetInfo;
 import com.winad.android.offers.AdManager;
 import com.winad.android.offers.AddScoreListener;
 
@@ -31,6 +32,10 @@ public class YinggaoActivity extends Activity implements AddScoreListener{
 		
 		super.onRestart();
 		Log.e("yinggao","onRestart");
+		
+		GetInfo getinfo =new GetInfo(this);
+		getinfo.execute();
+		
 		finish();
 		
 	}

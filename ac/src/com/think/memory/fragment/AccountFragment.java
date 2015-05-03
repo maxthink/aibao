@@ -89,7 +89,7 @@ public class AccountFragment extends Fragment {
 	
 	private void initSomeData()
 	{
-		if(Common.show_ok){
+		if(Common.getdata_ok){
 			webView.loadUrl( "javascript:initInfo("+Common.today/Common.rate+","+Common.total/Common.rate+","+Common.score/Common.rate+")" );
 			webView.loadUrl( "javascript:initInfo2("+Common.task_count+","+Common.exchange_count+")" );
 		}
